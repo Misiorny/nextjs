@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 function Post({ post }) {
 	const router = useRouter();
-	const {slug} = router.query;
+	const {slug}=router.query;
 	return (
 		<div>
 			<p>Post: #{post.id}</p>
@@ -28,7 +28,7 @@ export async function getServerSideProps({ params }) {
 		props: {
 			post: data,
 		}
-	};
+	}
 }
 
 export default Post;

@@ -11,16 +11,18 @@ function Posts({posts}) {
   return (
 	  <div>
 		<h1>Posts</h1>
-		{posts && posts.map((post) => <div key={`post-${post.id}`}>
-		  <h3>
-			<Link href={`/post/${post.id}`}>
-			  <a>
-				{post.title}
-			  </a>
-			</Link>
-		  </h3>
-		  <p>{post.body}</p>
-		</div>)}
+		{posts && posts.map((post) =>
+			<div key={`post-${post.id}`}>
+			  <h3>
+				<Link href={`/posts/${post.id}`}>
+				  <a>
+					{post.title}
+				  </a>
+				</Link>
+			  </h3>
+			  <p>{post.body}</p>
+			</div>
+		)}
 	  </div>
   );
 }
